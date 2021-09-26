@@ -4,4 +4,4 @@ WebAPI Created using ASP.NET Core backed with a SQLLite Database that has been s
 
 Index Page:
 * Allows Uploading of Meter Reading File - Consumes API hosted within Same Project (Provides Feedback on Success / Failure Counts)
-* TBD - Add Accounts View
+* Accounts View - To View All Accounts in Database
