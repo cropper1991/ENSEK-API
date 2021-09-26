@@ -15617,6 +15617,32 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "ENSEK_API",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\Shared\\_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

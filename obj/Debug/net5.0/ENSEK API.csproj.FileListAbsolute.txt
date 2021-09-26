@@ -45,3 +45,18 @@ C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK
 C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ref\ENSEK API.dll
 C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.pdb
 C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.genruntimeconfig.cache
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\bin\Debug\net5.0\ENSEK API.Views.dll
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\bin\Debug\net5.0\ENSEK API.Views.pdb
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.RazorAssemblyInfo.cache
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.RazorAssemblyInfo.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.TagHelpers.input.cache
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.TagHelpers.output.cache
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.RazorCoreGenerate.cache
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.RazorTargetAssemblyInfo.cs
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.Views.pdb
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\bin\Debug\net5.0\System.Text.Json.dll

@@ -54,32 +54,32 @@ namespace ENSEK_API.Controllers
 
                                         if (DatabaseHandler.AddMeterReading(Reading, _logger))
                                         {
-                                            Result.SuccessfulCount += 1;
+                                            Result.successfulCount += 1;
                                         }
                                         else
                                         {
-                                            Result.FailedCount += 1;
+                                            Result.failedCount += 1;
                                         }
                                     }
                                     else
                                     { //Unable to Parse Values - Skip Record and treat as Failure
-                                        Result.FailedCount += 1;
+                                        Result.failedCount += 1;
                                     }
                                 }
                                 else
                                 { //Invalid Format Provided - Skip Line
-                                    Result.FailedCount += 1;
+                                    Result.failedCount += 1;
                                 }
                             }
                             else
                             { //Skip Reading - Not in Valid Format
-                                Result.FailedCount += 1;
+                                Result.failedCount += 1;
                             }
                         }
                         catch (Exception Ex)
                         { //Capture any Unexpected Exceptions and Log via Logger - Marking as a Failure
                             _logger.LogError(Ex, "Meter Reading Upload Failure");
-                            Result.FailedCount += 1;
+                            Result.failedCount += 1;
                         }
                     }
                 }

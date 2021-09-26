@@ -1,0 +1,30 @@
+@page
+@using System.Text.Json;
+@using ENSEK_API.Structures;
+@model IndexModel
+@{
+    ViewData["Title"] = "ENSEK Front End Application";
+    ViewData["PageName"] = "Index"; //Keep Track of Page Name (used to Enable / Disable certain buttons and links)
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div>
+    <h3>Meter Readings</h3>
+    <form id="UploadForm" method="post" runat="server" EncType="multipart/form-data">
+        <Label>Select file for Upload: </Label>
+        <INPUT id="MeterReadingFile" type="file" runat="server" NAME="MeterReadingFile"
+            onchange="$('#UploadForm > input[type=submit]').prop('disabled', false);">
+        <input name="Submit" disabled type="submit" value="Perform Upload">
+
+        @if (ViewData["UploadResponse"] != null)
+        {
+            <div>Successful: @(((MeterReadingUploadResult)ViewData["UploadResponse"]).successfulCount)</div>
+            <div>Unsuccessful: @(((MeterReadingUploadResult)ViewData["UploadResponse"]).failedCount)</div>
+        }
+    </form>
+</div>
+@*
