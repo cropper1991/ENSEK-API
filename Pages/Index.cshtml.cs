@@ -14,7 +14,6 @@ namespace Claims_Application.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public IndexModel[] LossTypes; //Store the Array of LossTypes retrieved from the Database
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -43,15 +42,13 @@ namespace Claims_Application.Pages
                                         if (Response.StatusCode == System.Net.HttpStatusCode.OK)
                                         {
                                             String ResponseText = await Response.Content.ReadAsStringAsync();
-                                            ViewData["UploadResponse"] = JsonSerializer.Deserialize<MeterReadingUploadResult>(ResponseText);
                                             return Page();
                                         }
                                         else
                                         {
                                             ModelState.Clear();
-                                            ModelState.AddModelError(string.Empty, "Username or Password is Incorrect");
+                                            ModelState.AddModelError("AccountStatus", "Failed to Retrieve Accounts");
                                             return Page();
-
                                         }
                                     }
                                 }

@@ -1,0 +1,50 @@
+@page
+@using System.Text.Json;
+@using ENSEK_API.Structures;
+@model AccountsModel
+@{
+    ViewData["Title"] = "ENSEK Front End Application - Accounts";
+    ViewData["PageName"] = "Accounts"; //Keep Track of Page Name (used to Enable / Disable certain buttons and links)
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div>
+    <h3>Accounts</h3>
+    @if (Model.Accounts != null) //Generate Accounts Table if we've managed to Retrieve Data
+{
+    <table border="1" style="width:100%;">
+        <tr>
+            <td style="width:20%;">
+                Account ID
+            </td>
+            <td style="width:40%;">
+                First Name
+            </td>
+            <td style="width:40%;">
+                Last Name
+            </td>
+        </tr>
+
+        @foreach (var item in Model.Accounts)
+        {
+            <tr>
+                <td style="width:20%;">
+                    @Html.DisplayFor(modelItem => item.accountID)
+                </td>
+                <td style="width:40%;">
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <td style="width:40%;">
+                    @Html.DisplayFor(modelItem => item.lastName)
+                </td>
+            </tr>
+        }
+    </table>
+} else {
+    <div style="color:red">Unable to Retrieve Accounts Data</div>
+}
+</div>

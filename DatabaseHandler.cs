@@ -1,6 +1,7 @@
 using ENSEK_API.Structures;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace ENSEK_API.Database
 {
@@ -12,7 +13,7 @@ namespace ENSEK_API.Database
         {
             try
             {
-                if (CheckAccountExists(Reading.AccountID, Logger))
+                if (CheckAccountExists(Reading.accountID, Logger))
                 { //Located Account
                     using (var connection = new SqliteConnection("Data Source=ensek.db"))
                     { //Open Database Connection
@@ -20,9 +21,9 @@ namespace ENSEK_API.Database
                         using (var command = connection.CreateCommand())
                         { //Create SqlCommand
                             command.CommandText = @"INSERT INTO MeterReadings ([AccountID],[Date],[MeterReading]) VALUES ($AccountID,$Date,$MeterReading);";
-                            command.Parameters.AddWithValue("$AccountID", Reading.AccountID);
-                            command.Parameters.AddWithValue("$Date", Reading.Date.ToString());
-                            command.Parameters.AddWithValue("$MeterReading", Reading.Reading);
+                            command.Parameters.AddWithValue("$AccountID", Reading.accountID);
+                            command.Parameters.AddWithValue("$Date", Reading.date.ToString());
+                            command.Parameters.AddWithValue("$MeterReading", Reading.reading);
                             command.ExecuteNonQuery(); //Add New Record
                         }
                     }
@@ -69,6 +70,52 @@ namespace ENSEK_API.Database
             }
 
             return false;
+        }
+
+        //Returns all Accounts in the Database
+        public static Account[] GetAccounts(ILogger Logger)
+        {
+            Account[] ReturnValue = new Account[31];
+            int Count = 0;
+
+            try
+            {
+                using (var connection = new SqliteConnection("Data Source=ensek.db"))
+                { //Create SqlConnection
+                    connection.Open();
+
+                    using (var command = connection.CreateCommand())
+                    { //Create SqlCommand
+                        command.CommandText = @"SELECT [AccountID],[FirstName],[LastName] FROM Accounts;";
+
+                        using (var reader = command.ExecuteReader())
+                        { //Open DB Reader
+                            while (reader.Read())
+                            { //While More Records to be Read
+                                ReturnValue[Count].accountID = reader.GetInt32(0);
+                                ReturnValue[Count].firstName = reader.GetString(1);
+                                ReturnValue[Count].lastName = reader.GetString(2);
+                                Count +=1 ;
+                                if(Count == ReturnValue.Length) Array.Resize(ref ReturnValue, Count + 32);
+                            }
+                        }
+                    }
+                }
+
+                if(Count == 0) {
+                    return null;
+                } else if (Count < ReturnValue.Length) {
+                    Array.Resize(ref ReturnValue, Count);
+                }
+
+                return ReturnValue;
+            }
+            catch (SqliteException Ex)
+            { //Exception occured during check - Log to Logger
+                Logger.LogError(Ex, "Exception during Account Retrieval");
+            }
+
+            return null;
         }
     }
 }

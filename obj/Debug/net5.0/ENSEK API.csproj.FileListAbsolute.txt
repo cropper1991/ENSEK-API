@@ -60,3 +60,4 @@ C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor
 C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.RazorTargetAssemblyInfo.cs
 C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\ENSEK API.Views.pdb
 C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\Mark Hopper\Documents\VS Code Projects\ENSEK API\obj\Debug\net5.0\Razor\Pages\Accounts.cshtml.g.cs

@@ -15634,6 +15634,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\Accounts.cshtml",
+      "TargetPath": "Pages\\Accounts.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Mark Hopper\\Documents\\VS Code Projects\\ENSEK API\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"

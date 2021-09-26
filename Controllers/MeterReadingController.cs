@@ -48,9 +48,9 @@ namespace ENSEK_API.Controllers
                                 { //Proivided in Format NNNNN
                                     if (int.TryParse(Split[0], out AccountID) && DateTime.TryParse(Split[1], out Date))
                                     { //Able to Parse Values of AccountID and Date - Continue Processing
-                                        Reading.AccountID = AccountID;
-                                        Reading.Date = Date;
-                                        Reading.Reading = Split[2];
+                                        Reading.accountID = AccountID;
+                                        Reading.date = Date;
+                                        Reading.reading = Split[2];
 
                                         if (DatabaseHandler.AddMeterReading(Reading, _logger))
                                         {
