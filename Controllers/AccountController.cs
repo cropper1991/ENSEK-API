@@ -11,7 +11,7 @@ namespace ENSEK_API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    //Controller to handle all API requests to do with Meter Readings (Uploading of Meter Reading CSV File)
+    //Controller to handle all API requests to do with Accounts
     public class AccountController : ControllerBase
     {
         private readonly ILogger<AccountController> _logger;

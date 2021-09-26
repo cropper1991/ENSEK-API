@@ -8,9 +8,9 @@ using System;
 using System.Text.Json;
 using ENSEK_API.Structures;
 
-namespace Claims_Application.Pages
+namespace ENSEK_API.Pages
 {
-    //Provides Model for the Loss Types View - Viewing of all Loss Types (providing logged in)
+    //Provides Model for the Accounts View - Viewing of all Accounts
     public class AccountsModel : PageModel
     {
         private readonly ILogger<AccountsModel> _logger;
@@ -26,21 +26,21 @@ namespace Claims_Application.Pages
             try
             {
                 using (HttpClientHandler handler = new HttpClientHandler())
-                {
+                { //Create HttpClientHandler - So we can override default SSL Logic/Behaviour
                     handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator; //Skip SSL Verification (would not be in Production Code)
                     using (HttpClient client = new HttpClient(handler))
-                    {
+                    { //Create HttpClient
                         using (var Response = await client.GetAsync("https://localhost:5001/get-accounts"))
-                        {
+                        { //Request Data from Web API for Accounts
                             if (Response.StatusCode == System.Net.HttpStatusCode.OK)
-                            {
+                            { //Request Successful - Parse Result
                                 Accounts = JsonSerializer.Deserialize<Account[]> (await Response.Content.ReadAsStringAsync());
                                 return Page();
                             }
                             else
-                            {
+                            { //Request Failure - Add Data to Model State
                                 ModelState.Clear();
-                                ModelState.AddModelError(string.Empty, "Username or Password is Incorrect");
+                                ModelState.AddModelError("APIResult", "Username or Password is Incorrect");
                                 return Page();
                             }
                         }
